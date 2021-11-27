@@ -18,8 +18,11 @@
                         <td>{{$bookData[$i]->details->author}}</td>
                     </tr>
                 @endfor
+                    <tr>
+                        <td> </td>
+                        <td class="d-flex justify-content-end">{{ $bookData->links() }}</td>
+                    </tr>
             </tbody>
         </table>
-            {{ $bookData->links() }}
     </div>
 @endsection

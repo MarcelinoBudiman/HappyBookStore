@@ -14,7 +14,8 @@
             </thead>
             <tbody>
                 <tr>
-                    <td bg-warning>No data...</td>
+                    <td class="bg-warning">No data...</td>
+                    <td class="bg-warning"></td>
                 </tr>
             </tbody>
         </table>
@@ -38,9 +39,12 @@
                         <td>{{$bookData[$i]->details->author}}</td>
                     </tr>
                 @endfor
+                    <tr>
+                        <td> </td>
+                        <td class="d-flex justify-content-end">{{ $bookData->links() }}</td>
+                    </tr>
             </tbody>
         </table>
-            {{ $bookData->links() }}
     </div>
 @endif
 @endsection
